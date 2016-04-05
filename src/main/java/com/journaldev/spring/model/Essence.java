@@ -6,6 +6,7 @@
 package com.journaldev.spring.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -37,6 +38,8 @@ public class Essence implements Serializable {
     private String operation;
     @Column(name = "Result")
     private String result;
+    @Column(name = "Date")
+    private Date date;
     
     public Long getId() {
         return id;
@@ -82,6 +85,15 @@ public class Essence implements Serializable {
     public String getResult() {
         return result;
     }
+    
+    public void setDate(Date date) {
+        this.date = date;
+    }
+    
+    public Date getDate() {
+        return date;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;

@@ -17,7 +17,6 @@
               </select>
             <input type="text" id="inputValue2" >
             <input type="submit" value="GO" id="somebutton" onclick="callServlet('POST'); return false" >
-            
             <div id="somediv"></div>
             <p>           
                 <a class="btn btn-primary" href="/springsecuritybasics/j_spring_security_logout">Exit</a>
@@ -54,11 +53,7 @@
                     }
                 }
                 if(bool) {
-                    document.getElementById("Form").action = "testServlet";
-                    document.getElementById("Form").method = methodType;
-                    document.getElementById("Form").innerHTML;
-                    var result;
-                    var form = $('#Form');                
+                    var result;              
                     $.ajax({
                         type: "POST",
                         url: "/springsecuritybasics/testServlet",

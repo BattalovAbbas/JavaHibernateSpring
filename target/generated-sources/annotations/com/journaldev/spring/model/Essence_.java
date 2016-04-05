@@ -1,5 +1,6 @@
 package com.journaldev.spring.model;
 
+import java.util.Date;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
@@ -9,6 +10,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Essence_ {
 
 	public static volatile SingularAttribute<Essence, String> result;
+	public static volatile SingularAttribute<Essence, Date> date;
 	public static volatile SingularAttribute<Essence, String> value2;
 	public static volatile SingularAttribute<Essence, String> value1;
 	public static volatile SingularAttribute<Essence, Long> id;

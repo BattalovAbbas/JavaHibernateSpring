@@ -20,19 +20,15 @@
         <script>
             var r;
             function callServlet(methodType) {
-                    document.getElementById("Form").action = "testServlet";
-                    document.getElementById("Form").method = methodType;
-                    document.getElementById("Form").innerHTML;
-                    var result;
-                    var form = $('#Form');                
+                    var result;            
                     $.ajax({
                         type: "GET",
                         url: "/springsecuritybasics/testServlet",
                         success: function(list){                            
                             result =  JSON.parse(list);
-                            for(var p in result) {
+                            for(var p in result) {                         
                                 var h = document.createElement("H2");
-                                var t = document.createTextNode("id="+result[p].id+", login="+result[p].login +" "+ result[p].value1+ " "+result[p].operation+" "+ result[p].value2+" = " + result[p].result);
+                                var t = document.createTextNode("id="+result[p].id+", login="+result[p].login +" "+ result[p].value1+ " "+result[p].operation+" "+ result[p].value2+" = " + result[p].result+" "+ result[p].date);
                                 h.appendChild(t);
                                 document.body.appendChild(h);
                             }                            

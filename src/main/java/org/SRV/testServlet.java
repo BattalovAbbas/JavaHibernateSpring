@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 import com.journaldev.spring.model.Essence;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -118,8 +119,10 @@ public class testServlet extends HttpServlet {
         
         EntityManager entityManager = entityManagerFactory.createEntityManager();        
         entityManager.getTransaction().begin();
+        Date date = new Date();
         Essence essence = new Essence();
         essence.setLogin(username);
+        essence.setDate(date);
         essence.setValue1(Double.toString(value1));
         essence.setValue2(Double.toString(value2));
         essence.setOperation(request.getParameter("operation"));
